@@ -21,8 +21,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "sha1": "^1.1.1",
-    "main":"api.js"
+    "sha1": "^1.1.1"
 
   },
 
@@ -32,23 +31,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
+
+  "description": "back",
+  "main":"api.js",
   "devDependencies": {},
   "author": "",
   "license": "ISC"
