@@ -34,7 +34,12 @@ let storage = multer.diskStorage({
     }
 })
 let uploa = multer({ storage: storage }).single('attach')
-app.use(express.static(__dirname+'upload'))
+app.use(express.static('upload'))
+if(process.env.NODE_ENV=="production"){
+app.use(express.static(__dirname+'/build'))
+}
+
+
 
 
 
