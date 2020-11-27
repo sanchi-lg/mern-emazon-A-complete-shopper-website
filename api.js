@@ -9,7 +9,8 @@ const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 const jwt = require('jwt-simple')
 const url = process.env.MONGODB_URL
-
+const PORT=process.env.PORT||3000
+const RPORT=process.env.RPORT||"http://localhost:3000"
 var fs = require('fs')
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 let productModel = require('./db/product')
@@ -37,7 +38,7 @@ app.use(express.static(__dirname+'upload'))
 
 
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
 
 })
 
@@ -437,7 +438,7 @@ app.post("/resetpassword", async (req, res) => {
                 to: email,
                 subject: "Reset Password",
                 html: `<h4>visit the given link to reset your password.Ignore if you have not attempted to reset password\
-                             <a href='http://localhost:${process.env.RPORT}/resetpassword/` + payload.email + "/" + token + "'>Click here</Link> </h4>"
+                             <a href='${RPORT}/resetpassword/` + payload.email + "/" + token + "'>Click here</Link> </h4>"
             }
 
             transporter.sendMail(mailOptions, function (err, info) {
