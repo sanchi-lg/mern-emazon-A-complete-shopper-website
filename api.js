@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 const jwt = require('jwt-simple')
 const url = process.env.MONGODB_URL
-const PORT=process.env.PORT||3000
+const PORT=process.env.PORT||9000
 const RPORT=process.env.RPORT||"http://localhost:3000"
 var fs = require('fs')
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -24,7 +24,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 const multer = require('multer')
 
-
 let dir = "./upload"
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -36,7 +35,11 @@ let storage = multer.diskStorage({
 let uploa = multer({ storage: storage }).single('attach')
 app.use(express.static('upload'))
 if(process.env.NODE_ENV=="production"){
-app.use(express.static(__dirname+'/build'))
+app.use(express.static('frontend/build'))
+const path=require('path')
+app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'frontend','build','index.html'))
+})
 }
 
 
@@ -44,7 +47,7 @@ app.use(express.static(__dirname+'/build'))
 
 
 app.listen(PORT, () => {
-
+console.log(`working on ${PORT}`)
 })
 
 app.get("/productsdisbycategory/:cat/:wear?", (req, res) => {
