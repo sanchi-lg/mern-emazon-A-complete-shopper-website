@@ -3,7 +3,7 @@
 
 
 ## General info
-This project is a e-commerce website 
+This project is a responsive e-commerce website suitable for all screen size
 
 ## Technologies used
 * CSS
@@ -15,6 +15,7 @@ This project is a e-commerce website
 
 ### Features
 * Fully complete website
+* Responsive website
 * Login as admin
 * Can add products to sell (as admin)
 * Edit those products
