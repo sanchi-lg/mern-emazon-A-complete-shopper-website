@@ -8,11 +8,15 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 const jwt = require('jwt-simple')
-const url = process.env.MONGODB_URL
+// const url = process.env.MONGODB_URL
+const {MONGODB_URL}=require('./keys')
+const {MONGO_URL}=require('./keys')
+const {EMAIL}=require('./keys')
+const {PASSWORD}=require('./keys')
 const PORT=process.env.PORT||9000
-const RPORT=process.env.RPORT||"http://localhost:3000"
+const {RPORT}=require('./keys')
 var fs = require('fs')
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 let productModel = require('./db/product')
 app.use(cors())
 let userModel = require('./db/user')
@@ -198,7 +202,7 @@ app.post("/upprowithoutimage", (req, res) => {
 app.get("/getcat/:v", (req, res) => {
     let v = req.params.v
 
-    MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, async function (err, client) {
+    MongoClient.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true }, async function (err, client) {
         const db = client.db('r')
         var ob = []
         await db.collection('pro').find({ category: v }).forEach(function (doc) {
@@ -267,13 +271,12 @@ app.post("/contact", (req, res) => {
 
         auth: {
 
-
-            user: process.env.EMail,
-            pass: process.env.PASSWORD
+            user: EMAIL,
+            pass: PASSWORD
         }
     })
     const mailOptions = {
-        to: process.env.EMail,
+        to: EMAIL,
         subject: req.body.subject,
         text: `name:${req.body.name}\n email:${req.body.email}\n message:${req.body.message}`
     }
@@ -436,8 +439,8 @@ app.post("/resetpassword", async (req, res) => {
 
                 auth: {
 
-                    user: process.env.EMail,
-                    pass: process.env.PASSWORD
+                    user: EMAIL,
+                    pass: PASSWORD
                 }
 
             })
