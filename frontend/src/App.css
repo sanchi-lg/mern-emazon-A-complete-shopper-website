@@ -68,7 +68,16 @@ body{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
 }
+.csvg{
+  margin-right: 2px;
+}
+.csvg *{
+  margin-right: 0;
+   }
+ .cbrack{
 
+     font-size: small;
+   }
 
 .wel{
   font-size: 13px;
@@ -1202,6 +1211,8 @@ font-weight: bold;
   .cartsign *{
    font-size:1.6rem ;
   }
+
+
   .header p{
 font-size: 18px;
   }
@@ -1231,7 +1242,7 @@ margin-top: 6rem;  }
   content: "\A";
   white-space: pre;
 }
-.newpro input,.newpro textarea{
+.newpro input,.newpro textarea,.newpro select {
   float: none;
   margin: auto;
   width: 80%;
@@ -1281,7 +1292,7 @@ font-size: 12px !important;
 }
 
 @media screen and (min-width:501px) and (max-width:750px){
- .newpros{
+ .newpro{
    width:90%;
  }
  .addaddress{

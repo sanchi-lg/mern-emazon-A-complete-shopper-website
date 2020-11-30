@@ -22,19 +22,15 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "sha1": "^1.1.1"
-
   },
-
   "scripts": {
     "start": "node api.js",
-    "build":"cd frontend && npm run build",
-    "install-frontend":"cd frontend && npm install",
-    "heroku-postbuild":"npm run install-frontend && npm run build"
-    
+    "build": "cd frontend && npm run build",
+    "install-frontend": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-frontend && npm run build"
   },
-
   "description": "back",
-  "main":"api.js",
+  "main": "api.js",
   "devDependencies": {},
   "author": "",
   "license": "ISC"

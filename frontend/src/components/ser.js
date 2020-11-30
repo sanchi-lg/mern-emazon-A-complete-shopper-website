@@ -65,6 +65,9 @@ export function registersl(data) {
 export function cart(v) {
     return axios.get(`${murl}/cart/${v}`)
 }
+export function cartlength(v) {
+    return axios.get(`${murl}/cart/${v}/"length"`)
+}
 export function orders(v) {
     return axios.get(`${murl}/orders/${v}`)
 }

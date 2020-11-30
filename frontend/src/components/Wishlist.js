@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import {  Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { FaRegHeart } from 'react-icons/fa'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 
-import {  murl, wish, productsdisbyid, atc, deletefrom } from './ser';
+import { murl, wish, productsdisbyid, atc, deletefrom,cartlength } from './ser';
 export class Wishlist extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            product: [], idquantity: [], v: "",  email: localStorage.getItem('uid')
+            product: [], idquantity: [], v: "", email: localStorage.getItem('uid')
         }
     }
 
@@ -45,13 +45,17 @@ export class Wishlist extends Component {
 
     atce = (pid) => {
 
-        atc({ email: this.state.email, id: pid,quantity:1 })
+        atc({ email: this.state.email, id: pid, quantity: 1 })
             .then(res => {
                 if (res.data.err == 1) {
                     alert(res.data.mssg);
                 }
 
                 else {
+                    cartlength(localStorage.getItem('uid'))
+                        .then(res => {
+                            localStorage.setItem("cnum", res.data)
+                        })
                     this.props.history.push("/cart")
 
                 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import { murl, cart, productsdisbyid, deletefrom, upcartq } from './ser';
+import { murl, productsdisbyid, deletefrom, upcartq ,cart,cartlength} from './ser';
 import { RiDeleteBin6Line } from 'react-icons/ri'
 
 import { BiCart } from 'react-icons/bi'
@@ -52,6 +52,10 @@ export class Cart extends Component {
                     alert(res.data.mssg);
                 }
                 else {
+                    cartlength(localStorage.getItem('uid'))
+                        .then(res => {
+                            localStorage.setItem("cnum", res.data)
+                        })
                     window.location.reload()
                 }
 
@@ -68,6 +72,10 @@ export class Cart extends Component {
                         alert(res.data.mssg);
                     }
                     else if (res.data.err == 0) {
+                        cartlength(localStorage.getItem('uid'))
+                            .then(res => {
+                                localStorage.setItem("cnum", res.data)
+                            })
                         window.location.reload()
                     }
 

@@ -17,8 +17,9 @@ export class Editpro extends Component {
         else {
             await productsdisbyid(this.state.cid)
                 .then(res => {
-                    this.setState({ products: res.data.ob })
-                    this.setState({ category: this.state.products.category, wear: this.state.products.wear, product: this.state.products.product, brand: this.state.products.brand, oprice: this.state.products.oprice, discount: this.state.products.discount, description: this.state.products.description })
+                    this.setState({ products: res.data.ob },()=>{                   
+                        this.setState({ category: this.state.products.category, wear: this.state.products.wear, product: this.state.products.product, brand: this.state.products.brand, oprice: this.state.products.oprice, discount: this.state.products.discount, description: this.state.products.description })
+               })
 
                 })
             await getcat(this.state.category)

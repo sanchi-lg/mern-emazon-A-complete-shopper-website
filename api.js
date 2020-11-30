@@ -68,8 +68,7 @@ app.get("/productsdisbycategory/:cat/:wear?", (req, res) => {
 app.get("/productsdis/:v?", (req, res) => {
     let cid = req.params.v
     if (cid != undefined) {
-        productModel.find({}, (err, data) => {
-        })
+        
         productModel.findOne({ _id: cid }, (err, data) => {
             res.json({ ob: data })
         })
@@ -233,11 +232,11 @@ app.get("/cart/:v/:num?", (req, res) => {
         if (num != undefined) {
             res.json(data.cart.length)
         }
+        else{
 
 
-
-        res.json(data.cart)
-
+               res.json(data.cart)
+        }
     })
 })
 

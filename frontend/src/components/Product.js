@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { productsdisbyid, murl, atc, atw } from './ser'
+import { productsdisbyid, murl, atc, atw, cartlength } from './ser'
 
 export class Product extends Component {
     constructor(props) {
@@ -24,9 +24,16 @@ export class Product extends Component {
     }
     atce = () => {
         if (this.state.email == "") {
-            alert("login first")
-            this.props.history.push("/usersignin")
+            if (localStorage.getItem('aid')) {
+                alert("login as a user for shopping!")
+
+            }
+            else {
+                alert("login first")
+                this.props.history.push("/usersignin")
+            }
         }
+
         else {
             atc(this.state)
                 .then(res => {
@@ -34,6 +41,10 @@ export class Product extends Component {
                         alert(res.data.mssg);
                     }
                     else {
+                        cartlength(localStorage.getItem('uid'))
+                            .then(res => {
+                                localStorage.setItem("cnum", res.data)
+                            })
                         this.props.history.push("/cart")
                         window.location.reload()
 
@@ -44,8 +55,14 @@ export class Product extends Component {
 
     wish = () => {
         if (this.state.email == "") {
-            alert("login first")
-            this.props.history.push("/usersignin")
+            if (localStorage.getItem('aid')) {
+                alert("login as a user for shopping!")
+
+            }
+            else {
+                alert("login first")
+                this.props.history.push("/usersignin")
+            }
         }
         else {
             atw({ email: this.state.email, id: this.state.id })
@@ -65,7 +82,7 @@ export class Product extends Component {
     }
 
     render() {
-        const{product}=this.state
+        const { product } = this.state
         return (
             <div >
                 {this.state.product != "" && <div className="product">

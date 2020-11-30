@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { login, registersl, resetpassword } from './ser'
+import { cartlength, login, registersl, resetpassword } from './ser'
 import { BiCheck } from 'react-icons/bi';
 
 import { GoogleLogin } from 'react-google-login';
@@ -8,7 +8,6 @@ import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props
 export class Login extends Component {
     constructor(props) {
         super(props)
-
 
 
 
@@ -26,7 +25,7 @@ export class Login extends Component {
 
     forgetpassword = () => {
         var pattern = /^[a-zA-Z0-9.-_]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    
+
         if (this.state.email == "") {
             this.setState({ err: "Enter registered Email-id" })
         }
@@ -116,6 +115,12 @@ export class Login extends Component {
                     if (this.state.v == "user") {
                         localStorage.setItem('uid', res.data.uid.email)
                         localStorage.setItem('uname', res.data.uid.name)
+                        cartlength(localStorage.getItem('uid'))
+                            .then(res => {
+                                console.log("entrd");
+                                console.log(res.data);
+                                localStorage.setItem("cnum", res.data)
+                            })
                         this.props.history.push("/")
 
                     }
@@ -156,7 +161,7 @@ export class Login extends Component {
                             </button>
                             <p style={{ textAlign: "left", display: "inline", color: "grey", fontSize: "12.3px" }}>Show password</p>
                         </div>
-                        <div ><button type="button" style={{color:"purple",cursor:"pointer",marginLeft:"14rem",marginTop:"1.3px",fontSize:"10px",border:"none",background:"transparent",width:"145px"}} onClick={this.forgetpassword}>Forgot Password?</button></div>
+                        <div ><button type="button" style={{ color: "purple", cursor: "pointer", marginLeft: "14rem", marginTop: "1.3px", fontSize: "10px", border: "none", background: "transparent", width: "145px" }} onClick={this.forgetpassword}>Forgot Password?</button></div>
 
                         <button >Submit</button>
 
