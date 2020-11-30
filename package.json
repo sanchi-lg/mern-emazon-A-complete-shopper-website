@@ -2,6 +2,8 @@
   "name": "backend",
   "version": "0.1.0",
   "private": true,
+  "main": "api.js",
+
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -25,13 +27,12 @@
     "sha1": "^1.1.1"
   },
   "scripts": {
-    "start": "node api.js",
+    "start":"node api.js",
     "build": "cd frontend && npm run build",
     "install-frontend": "cd frontend && npm install",
     "heroku-postbuild": "npm run install-frontend && npm run build"
   },
   "description": "back",
-  "main": "api.js",
   "devDependencies": {},
   "author": "",
   "license": "ISC"
