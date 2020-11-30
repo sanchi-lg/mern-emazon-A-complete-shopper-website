@@ -52,7 +52,16 @@ app.get('*',(req,res)=>{
 
 app.listen(PORT, () => {
 console.log(`working on ${PORT}`)
-})
+console.log("//////")
+console.log(process.env.NODE_ENV)
+console.log(process.env.NODE_ENV=="production")
+
+console.log("//////***************")
+
+
+
+
+
 
 app.get("/productsdisbycategory/:cat/:wear?", (req, res) => {
     let cat = req.params.cat
