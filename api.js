@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-require('dotenv').config({ path: './d.env' })
+// require('dotenv').config({ path: './d.env' })
 
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
