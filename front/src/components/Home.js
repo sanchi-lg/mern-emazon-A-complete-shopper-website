@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { productsdis, murl, productsdisbycategory } from './ser';
+import { productsdis, murl} from './ser';
 import { BiSort } from 'react-icons/bi'
 import { BsFilter } from 'react-icons/bs'
 import { AiOutlineSearch } from 'react-icons/ai'
-import { RiDeleteBin6Line } from 'react-icons/ri'
 
 export class Home extends Component {
   constructor(props) {

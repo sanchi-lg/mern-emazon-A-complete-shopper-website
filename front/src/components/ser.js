@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const murl=process.env.REACT_APP_RPORT||"http://localhost:9000"
+export const murl="http://localhost:9000"
 
 export function productsdis() {
     return axios.get(`${murl}/productsdis`)
