@@ -30,6 +30,29 @@ const nodemailer = require('nodemailer')
 let adminModel = require('./db/admin')
 app.use(bodyParser.urlencoded({ extended: false }))
 
+productModel.find({},(err,data)=>{
+    console.log("////////////////pro////////////////////////")
+    console.log(err);
+    console.log(data);
+    console.log("////////////////pro////////////////////////")
+
+})
+
+adminModel.find({},(err,data)=>{
+    console.log("////////////////admin////////////////////////")
+    console.log(err);
+    console.log(data);
+    console.log("////////////////admin////////////////////////")
+
+})
+
+userModel.find({},(err,data)=>{
+    console.log("////////////////user////////////////////////")
+    console.log(err);
+    console.log(data);
+    console.log("////////////////user////////////////////////")
+
+})
 
 app.use(bodyParser.json())
 const multer = require('multer')
