@@ -161,8 +161,11 @@ export class Login extends Component {
                             </button>
                             <p style={{ textAlign: "left", display: "inline", color: "grey", fontSize: "12.3px" }}>Show password</p>
                         </div>
-                        <div ><button type="button" style={{ color: "purple", cursor: "pointer", marginLeft: "14rem", marginTop: "1.3px", fontSize: "10px", border: "none", background: "transparent", width: "145px" }} onClick={this.forgetpassword}>Forgot Password?</button></div>
 
+                        {this.state.v == "user" &&
+
+                            <div ><button type="button" style={{ color: "purple", cursor: "pointer", marginLeft: "14rem", marginTop: "1.3px", fontSize: "10px", border: "none", background: "transparent", width: "145px" }} onClick={this.forgetpassword}>Forgot Password?</button></div>
+                        }
                         <button >Submit</button>
 
                     </fieldset>
