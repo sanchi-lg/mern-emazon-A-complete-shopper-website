@@ -11,7 +11,7 @@ export class Home extends Component {
     super(props)
 
     this.state = {
-      products: [], pcat: this.props.match.params.cat, sortopt: "", vis: false, search: "", spos: this.props.spos, sarr: [], filter: this.props.location.filter
+      products: [], sortopt: "", vis: false, search: "", spos: this.props.spos, sarr: [], filter: this.props.location.filter
     }
   }
 
@@ -237,24 +237,18 @@ scf=(c,w)=>{
 
   async componentDidMount() {
 
-    if (this.state.pcat != undefined) {
-      await productsdisbycategory(this.state.pcat)
-        .then(res => {
-          this.setState({ products: [...res.data.ob] })
-          this.setState({ sarr: [...res.data.ob] })
 
-
-        })
-
-    }
-    else {
       await productsdis()
         .then(res => {
+          console.log(res.data)
+          console.log(res.data.ob)
           this.setState({ products: [...res.data.ob] })
           this.setState({ sarr: [...res.data.ob] })
+          console.log("///////////////////////////////////");
+
 
         })
-    }
+    
 
     if (this.props.location.filter != undefined) {
 
