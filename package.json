@@ -27,9 +27,9 @@
   },
   "scripts": {
     "start": "node api.js",
-    "build": "cd frontend && npm run build",
-    "install-frontend": "cd frontend && npm install",
-    "heroku-postbuild": "npm run install-frontend && npm run build"
+    "build": "cd front && npm run build",
+    "install-front": "cd front && npm install",
+    "heroku-postbuild": "npm run install-front && npm run build"
   },
   "engines": {
     "node": "14.2.0",
