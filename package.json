@@ -32,6 +32,9 @@
     "install-frontend": "cd frontend && npm install",
     "heroku-postbuild": "npm run install-frontend && npm run build"
   },
+  "engines":{
+    "node": "14.2.0"
+  },
   "description": "back",
   "devDependencies": {},
   "author": "",
