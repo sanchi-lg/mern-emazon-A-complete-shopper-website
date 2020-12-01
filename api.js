@@ -16,7 +16,7 @@ const {PASSWORD}=require('./config/keys')
 const PORT=process.env.PORT||9000
 const {RPORT}=require('./config/keys')
 var fs = require('fs')
-mongoose.connect(MOgit checkout headNGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 let productModel = require('./db/product')
 app.use(cors())
 let userModel = require('./db/user')
