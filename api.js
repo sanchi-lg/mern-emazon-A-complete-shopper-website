@@ -27,6 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 const multer = require('multer')
+const { Logger } = require('mongodb')
 
 let dir = "./upload"
 let storage = multer.diskStorage({
@@ -57,6 +58,12 @@ console.log(process.env.NODE_ENV)
 console.log(process.env.NODE_ENV=="production")
 
 console.log("//////***************")
+console.log(MONGO_URL);
+console.log(MONGODB_URL);
+console.log(EMAIL);
+console.log(PASSWORD);
+console.log(RPORT);
+console.log("////////////////////////////////1111111111111");
 })
 
 app.get("/productsdisbycategory/:cat/:wear?", (req, res) => {
