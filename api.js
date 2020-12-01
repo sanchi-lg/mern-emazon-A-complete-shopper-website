@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 const multer = require('multer')
-const { Logger } = require('mongodb')
+// const { Logger } = require('mongodb')
 
 let dir = "./upload"
 let storage = multer.diskStorage({
