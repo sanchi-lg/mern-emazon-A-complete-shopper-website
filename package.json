@@ -31,7 +31,6 @@
     "install-front": "cd front && npm install",
     "heroku-postbuild": "npm run install-front && npm run build"
   },
-  "proxy":"https://localhost:9000",
   "engines": {
     "node": "14.2.0",
     "npm": "6.14.4"
