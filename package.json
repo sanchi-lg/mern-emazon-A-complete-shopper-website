@@ -27,9 +27,8 @@
     "sha1": "^1.1.1"
   },
   "scripts": {
-    "start": "node api.js",
-  
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front && npm run build --prefix front"
+    "start": "node api.js"
+       
   },
   "engines": {
     "node": "14.2.0",
