@@ -16,9 +16,11 @@ export class EditProfile extends Component {
   }
 
   componentDidMount() {
-    if (!localStorage.getItem('uid')) {
-      this.props.history.push("/")
-    }
+    if (localStorage.getItem('uid') == undefined) {
+      alert("login first")
+      this.props.history.push("/register")
+  }
+ 
 
   }
 
