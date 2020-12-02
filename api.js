@@ -32,18 +32,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 
-adminModel.find({},(err,data)=>{
-    console.log("////////////////admin////////////////////////")
-    console.log(err);
-    console.log(data);
-    console.log("////////////////admin////////////////////////")
-
-})
-
 
 app.use(bodyParser.json())
 const multer = require('multer')
-// const { Logger } = require('mongodb')
 
 let dir = "./upload"
 let storage = multer.diskStorage({
@@ -54,14 +45,11 @@ let storage = multer.diskStorage({
     }
 })
 let uploa = multer({ storage: storage }).single('attach')
-app.use(express.static('upload'))
+app.use(express.static(__dirname+'/upload'))
 
 if(process.env.NODE_ENV=="production"){
 app.use(express.static(__dirname+'/front/build'))
-const path=require('path')
-app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'front','build','index.html'))
-})
+
 
 }
 
@@ -69,17 +57,7 @@ app.get('*',(req,res)=>{
 
 app.listen(PORT, () => {
 console.log(`working on ${PORT}`)
-console.log("//////")
-console.log(process.env.NODE_ENV)
-console.log(process.env.NODE_ENV=="production")
 
-console.log("//////***************")
-console.log(MONGO_URL);
-console.log(MONGODB_URL);
-console.log(EMAIL);
-console.log(PASSWORD);
-console.log(RPORT);
-console.log("////////////////////////////////1111111111111");
 })
 
 app.get("/productsdisbycategory/:cat/:wear?", (req, res) => {
