@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 9000
 const { RPORT } = require('./config/keys')
 var fs = require('fs')
 
-mongoose.connect(`${MONGO_URL}`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let productModel = require('./db/product')
 app.use(cors())
@@ -25,7 +25,10 @@ let userModel = require('./db/user')
 const nodemailer = require('nodemailer')
 let adminModel = require('./db/admin')
 app.use(bodyParser.urlencoded({ extended: false }))
-
+adminModel.find({},(err,data)=>{
+    console.log(err);
+    console.log(data);
+})
 
 
 
@@ -44,11 +47,12 @@ let uploa = multer({ storage: storage }).single('attach')
 app.use(express.static(__dirname + '/upload'))
 
 if (process.env.NODE_ENV == "production") {
+    app.use(express.static(__dirname + '/front/build'))
     app.use(express.static(__dirname+'/front/build'))
     const path=require('path')
     app.get('*',(req,res)=>{
         res.sendFile(path.resolve(__dirname,'front','build','index.html'))
-    })    
+                  
 
 }
 
