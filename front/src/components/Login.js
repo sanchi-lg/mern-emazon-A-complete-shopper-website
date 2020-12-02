@@ -120,8 +120,9 @@ export class Login extends Component {
                                 console.log("entrd");
                                 console.log(res.data);
                                 localStorage.setItem("cnum", res.data)
+                                this.props.history.push("/")
+
                             })
-                        this.props.history.push("/")
 
                     }
                 }

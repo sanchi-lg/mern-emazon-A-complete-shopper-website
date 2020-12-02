@@ -283,6 +283,7 @@ margin-top: 6px;
  .open{
   transform:translateX(0);
   transition: all 0.3s;
+  overflow: auto;
 
  }
 
@@ -1111,8 +1112,8 @@ padding:0;
   color: crimson;
 }
 .empty button{
-  width:14rem;
-  height: 3.8rem;
+  width:156px;
+  height: 42px;
   border-radius: 0.7rem;
   background-color: purple;
   color: white;
@@ -1201,7 +1202,13 @@ font-weight: bold;
     overflow: hidden;
   }
 
-
+  .empty button{
+    font-size: x-small;
+    width:110px;
+    height: 40px;
+    border-radius:5px;
+   
+  }
 
   .wel{
    font-size:1.3rem;

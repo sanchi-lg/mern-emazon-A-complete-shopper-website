@@ -55,8 +55,9 @@ export class Wishlist extends Component {
                     cartlength(localStorage.getItem('uid'))
                         .then(res => {
                             localStorage.setItem("cnum", res.data)
+                            this.props.history.push("/cart")
+
                         })
-                    this.props.history.push("/cart")
 
                 }
             })

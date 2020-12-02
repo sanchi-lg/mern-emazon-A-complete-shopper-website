@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { productsdis, murl} from './ser';
+import { productsdis, murl } from './ser';
 import { BiSort } from 'react-icons/bi'
 import { BsFilter } from 'react-icons/bs'
 import { AiOutlineSearch } from 'react-icons/ai'
@@ -18,81 +18,81 @@ export class Home extends Component {
     this.setState({ sortopt: e.target.value })
     this.setState({ vis: false })
     if (e.target.value == "htl") {
-    
 
-         this.state.sarr.sort(function (a, b) {
-          var keyA = a.price
-          var keyB = b.price
-          if (keyA > keyB) {
-            return -1
-          }
-          if (keyA < keyB) {
-            return 1
-          }
-          return 0
 
-        })
+      this.state.sarr.sort(function (a, b) {
+        var keyA = a.price
+        var keyB = b.price
+        if (keyA > keyB) {
+          return -1
+        }
+        if (keyA < keyB) {
+          return 1
+        }
+        return 0
+
+      })
 
     }
 
     if (e.target.value == "newest") {
 
-      this.setState({ sarr: [...this.state.products] },()=>{
+      this.setState({ sarr: [...this.state.products] }, () => {
         if (this.props.location.filter != undefined) {
 
           this.applyfilter()
-   
-   
-       }
- 
+
+
+        }
+
       }
       )
-     
+
     }
 
 
     if (e.target.value == "lth") {
 
-         this.state.sarr.sort(function (a, b) {
+      this.state.sarr.sort(function (a, b) {
 
-          var keyA = a.price
-          var keyB = b.price
-          if (keyA > keyB) {
-            return 1
+        var keyA = a.price
+        var keyB = b.price
+        if (keyA > keyB) {
+          return 1
 
-          }
-          if (keyA < keyB) {
-            return -1
-          }
-          return 0
+        }
+        if (keyA < keyB) {
+          return -1
+        }
+        return 0
 
-        })
+      })
 
     }
 
   }
 
 
-scf=(c,w)=>{
- 
-      let farr = this.state.products.filter(p => {
-                 
-          if (p.wear==w) {
-            return p;
-          }
+  scf = (c, w) => {
+    let farr = this.state.products.filter(p => {
+
+      if (p.wear == w) {
+        return p;
+      }
+
+    })
+
+
+    this.setState({
+      sarr: farr.filter(p => {
+
+        if (p.category == c) {
+          return p;
+        }
 
       })
-
-
-      this.setState({sarr:farr.filter(p => {
-
-          if (p.category==c) {
-            return p;
-          }
-
-      })
-      })
-}
+    })
+  }
 
 
 
@@ -109,7 +109,7 @@ scf=(c,w)=>{
       farr = farr.filter(p => {
         for (var i = 0; i < obj.brand.length; i++) {
 
-          if (p.brand.toLowerCase()==(obj.brand[i].toLowerCase())) {
+          if (p.brand.toLowerCase() == (obj.brand[i].toLowerCase())) {
             return p;
           }
 
@@ -122,7 +122,7 @@ scf=(c,w)=>{
       farr = farr.filter(p => {
         for (var i = 0; i < obj.category.length; i++) {
 
-          if (p.wear.toLowerCase()==(obj.category[i].toLowerCase())) {
+          if (p.wear.toLowerCase() == (obj.category[i].toLowerCase())) {
             return p;
           }
 
@@ -135,7 +135,7 @@ scf=(c,w)=>{
       farr = farr.filter(p => {
         for (var i = 0; i < obj.ideal.length; i++) {
 
-          if (p.category.toLowerCase()==(obj.ideal[i].toLowerCase())) {
+          if (p.category.toLowerCase() == (obj.ideal[i].toLowerCase())) {
             return p;
           }
 
@@ -231,26 +231,26 @@ scf=(c,w)=>{
 
     }
 
+    else if (prevprops.location.sc != this.props.location.sc || prevprops.location.p != this.props.location.p) {
+      this.scf(this.props.location.sc, this.props.location.p)
+    }
+
 
   }
 
   async componentDidMount() {
 
-    console.log("in");
 
-      await productsdis()
-        .then(res => {
+    await productsdis()
+      .then(res => {
 
-          console.log("in");
-          console.log(res.data)
-          console.log(res.data.ob)
-          this.setState({ products: [...res.data.ob] })
-          this.setState({ sarr: [...res.data.ob] })
-          console.log("///////////////////////////////////");
+      
+        this.setState({ products: [...res.data.ob] })
+        this.setState({ sarr: [...res.data.ob] })
 
 
-        })
-    
+      })
+
 
     if (this.props.location.filter != undefined) {
 
@@ -258,8 +258,11 @@ scf=(c,w)=>{
 
 
     }
-
+    else if (this.props.location.sc) {
+      this.scf(this.props.location.sc, this.props.location.p)
+    }
   }
+
 
   sort = () => {
     this.setState(p => ({ vis: !p.vis }))
@@ -299,7 +302,7 @@ scf=(c,w)=>{
     }
   }
 
-  
+
   render() {
 
     return (

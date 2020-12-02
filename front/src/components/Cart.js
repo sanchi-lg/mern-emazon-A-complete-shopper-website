@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import { murl, productsdisbyid, deletefrom, upcartq ,cart,cartlength} from './ser';
+import { murl, productsdisbyid, deletefrom, upcartq, cart, cartlength } from './ser';
 import { RiDeleteBin6Line } from 'react-icons/ri'
 
 import { BiCart } from 'react-icons/bi'
@@ -17,7 +17,6 @@ export class Cart extends Component {
 
 
     async componentDidMount() {
-
         if (localStorage.getItem('uid') == undefined) {
             alert("login first")
             this.props.history.push("/register")
@@ -36,12 +35,15 @@ export class Cart extends Component {
 
                         this.setState(p => ({
                             product: [...p.product, { id: v.id, quantity: v.quantity, image: res.data.ob.image, price: res.data.ob.price, product: res.data.ob.product, brand: res.data.ob.brand }], rs: (v.quantity * res.data.ob.price) + p.rs
-                        }), () => { this.setState({ page: true }) })
-
+                        }))
 
                     })
 
+
             })
+            this.setState({ page: true })
+
+
         }
     }
 
@@ -55,8 +57,9 @@ export class Cart extends Component {
                     cartlength(localStorage.getItem('uid'))
                         .then(res => {
                             localStorage.setItem("cnum", res.data)
+                            window.location.reload()
+
                         })
-                    window.location.reload()
                 }
 
             })
@@ -75,8 +78,9 @@ export class Cart extends Component {
                         cartlength(localStorage.getItem('uid'))
                             .then(res => {
                                 localStorage.setItem("cnum", res.data)
+                                window.location.reload()
+
                             })
-                        window.location.reload()
                     }
 
                 })

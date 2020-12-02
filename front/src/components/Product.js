@@ -22,7 +22,7 @@ export class Product extends Component {
             })
 
     }
-    atce = () => {
+    atce =() => {
         if (this.state.email == "") {
             if (localStorage.getItem('aid')) {
                 alert("login as a user for shopping!")
@@ -41,12 +41,13 @@ export class Product extends Component {
                         alert(res.data.mssg);
                     }
                     else {
-                        cartlength(localStorage.getItem('uid'))
+                         cartlength(localStorage.getItem('uid'))
                             .then(res => {
                                 localStorage.setItem("cnum", res.data)
-                            })
-                        this.props.history.push("/cart")
+                                this.props.history.push("/cart")
                         window.location.reload()
+                            })
+                      
 
                     }
                 })

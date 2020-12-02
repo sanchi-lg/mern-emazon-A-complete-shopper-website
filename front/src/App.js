@@ -27,7 +27,7 @@ import Pagenf from './components/Pagenf';
 
 import Login from './components/Login';
 import Checkout from './components/Checkout';
-import { cart, getcat,cartlength } from './components/ser';
+import { cart, getcat, cartlength } from './components/ser';
 import Addressselection from './components/Addressselection';
 import Orders from './components/Orders';
 import EditProfile from './components/EditProfile';
@@ -147,11 +147,11 @@ export class App extends Component {
               </div>}
             {!localStorage.getItem("aid") &&
               <Link to="/wishlist" title="wishlist" className="wish">{<FaHeart />}</Link>}
-        
-        {!localStorage.getItem("aid") && localStorage.getItem("cnum") && localStorage.getItem("cnum") != 0 &&
 
-              <Link to="/cart" >Cart<span className="csvg">{<BiCart/>}</span><span className="cbrack">({localStorage.getItem("cnum")})</span></Link>}
-            {!localStorage.getItem("aid") && (localStorage.getItem("cnum") == 0 ||!localStorage.getItem("uid"))&&
+            {!localStorage.getItem("aid") && localStorage.getItem("cnum") && localStorage.getItem("cnum") != 0 &&
+
+              <Link to="/cart" >Cart<span className="csvg">{<BiCart />}</span><span className="cbrack">({localStorage.getItem("cnum")})</span></Link>}
+            {!localStorage.getItem("aid") && (localStorage.getItem("cnum") == 0 || !localStorage.getItem("uid")) &&
 
               <Link to="/cart" >Cart<span>{<BiCart />}</span></Link>}
 
@@ -196,8 +196,15 @@ export class App extends Component {
                 <ul className="sco" >
                   {this.state.sca.map(p =>
                     <li>
-                      <button onClick={() => this.state.iRef.current.scf(this.state.sc, p)}>{p}</button>
+                      <button
 
+                        onClick={() => {                        this.props.history.push({pathname:"/",sc:this.state.sc,p:p})
+
+                        }
+                        }
+                      >
+                        {p}
+                      </button>
                     </li>
                   )}
                 </ul>
@@ -211,8 +218,13 @@ export class App extends Component {
                 <ul className="sco" >
                   {this.state.sca.map(p =>
                     <li>
-                      <button onClick={() => this.state.iRef.current.scf(this.state.sc, p)}>{p}</button>
-
+                      <button onClick={() => {
+                                                this.props.history.push({pathname:"/",sc:this.state.sc,p:p})
+                                              }
+                      }
+                      >
+                        {p}
+                      </button>
                     </li>
                   )}
                 </ul>
@@ -226,8 +238,14 @@ export class App extends Component {
                 <ul className="sco" >
                   {this.state.sca.map(p =>
                     <li>
-                      <button onClick={() => this.state.iRef.current.scf(this.state.sc, p)}>{p}</button>
+                      <button onClick={() => {
+                        this.props.history.push({pathname:"/",sc:this.state.sc,p:p})
 
+                      }
+                      }
+                      >
+                        {p}
+                      </button>
                     </li>
                   )}
                 </ul>

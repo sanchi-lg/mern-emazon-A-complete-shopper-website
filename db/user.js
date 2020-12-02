@@ -11,9 +11,9 @@ const userSchema=new mongoose.Schema({
     
         created_at:{type:Date,default:Date.now},
     
-    wish:{type:Array},
-    address:{type:Array},
-    orders:{type:Array},
+    wish:{type:Array,default:[]},
+    address:{type:Array,default:[]},
+    orders:{type:Array,default:[]},
     latestrespass:{type:{ltime:Number,ltoken:String}}
 
 
