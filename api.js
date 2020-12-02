@@ -9,19 +9,15 @@ const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 const jwt = require('jwt-simple')
 // const url = process.env.MONGODB_URL
-const {MONGODB_URL}=require('./config/keys')
-const {MONGO_URL}=require('./config/keys')
-const {EMAIL}=require('./config/keys')
-const {PASSWORD}=require('./config/keys')
-const PORT=process.env.PORT||9000
-const {RPORT}=require('./config/keys')
+const { MONGODB_URL } = require('./config/keys')
+const { MONGO_URL } = require('./config/keys')
+const { EMAIL } = require('./config/keys')
+const { PASSWORD } = require('./config/keys')
+const PORT = process.env.PORT || 9000
+const { RPORT } = require('./config/keys')
 var fs = require('fs')
-console.log("//////***************")
-console.log(MONGO_URL);
-console.log(MONGODB_URL);
+
 mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
-console.log("''''''''''''''''''''''''");
-mongoose.connect(`${MONGO_URL}`, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let productModel = require('./db/product')
 app.use(cors())
@@ -45,10 +41,10 @@ let storage = multer.diskStorage({
     }
 })
 let uploa = multer({ storage: storage }).single('attach')
-app.use(express.static(__dirname+'/upload'))
+app.use(express.static(__dirname + '/upload'))
 
-if(process.env.NODE_ENV=="production"){
-app.use(express.static(__dirname+'/front/build'))
+if (process.env.NODE_ENV == "production") {
+    app.use(express.static(__dirname + '/front/build'))
 
 
 }
@@ -56,7 +52,7 @@ app.use(express.static(__dirname+'/front/build'))
 
 
 app.listen(PORT, () => {
-console.log(`working on ${PORT}`)
+    console.log(`working on ${PORT}`)
 
 })
 
@@ -76,10 +72,9 @@ app.get("/productsdisbycategory/:cat/:wear?", (req, res) => {
     }
 })
 app.get("/productsdis/:v?", (req, res) => {
-    console.log("/////////////entered///////////////////////////");
     let cid = req.params.v
     if (cid != undefined) {
-        
+
         productModel.findOne({ _id: cid }, (err, data) => {
             res.json({ ob: data })
         })
@@ -88,9 +83,7 @@ app.get("/productsdis/:v?", (req, res) => {
 
 
         productModel.find({}, (err, docs) => {
-            console.log("/////////////////////productsdis////////////////////////////////////////////////////");
             var ob = docs;
-            console.log(ob);
             res.json({ "ob": ob });
 
 
@@ -245,10 +238,10 @@ app.get("/cart/:v/:num?", (req, res) => {
         if (num != undefined) {
             res.json(data.cart.length)
         }
-        else{
+        else {
 
 
-               res.json(data.cart)
+            res.json(data.cart)
         }
     })
 })
