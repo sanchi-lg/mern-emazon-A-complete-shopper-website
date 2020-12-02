@@ -236,9 +236,12 @@ scf=(c,w)=>{
 
   async componentDidMount() {
 
+    console.log("in");
 
       await productsdis()
         .then(res => {
+
+          console.log("in");
           console.log(res.data)
           console.log(res.data.ob)
           this.setState({ products: [...res.data.ob] })

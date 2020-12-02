@@ -111,6 +111,7 @@ app.get("/productsdisbycategory/:cat/:wear?", (req, res) => {
     }
 })
 app.get("/productsdis/:v?", (req, res) => {
+    console.log("/////////////entered///////////////////////////");
     let cid = req.params.v
     if (cid != undefined) {
         
