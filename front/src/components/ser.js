@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const murl="http://localhost:9000"
+export const murl=""
 
 export function productsdis() {
     return axios.get(`${murl}/productsdis`)
