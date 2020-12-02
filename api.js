@@ -124,7 +124,7 @@ app.get("/productsdis/:v?", (req, res) => {
         productModel.find({}, (err, docs) => {
             console.log("/////////////////////productsdis////////////////////////////////////////////////////");
             var ob = docs;
-            console.log(ob);
+            console.log();
             res.json({ "ob": ob });
 
 
