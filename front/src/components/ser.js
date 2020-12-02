@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-export const murl=""
+export const murl="http://localhost:9000"
 
 export function productsdis() {
-    return axios.get("/productsdis")
+    return axios.get("${murl}/productsdis")
 }
 export function productsdisbyid(v) {
     return axios.get(`${murl}/productsdis/${v}`)
