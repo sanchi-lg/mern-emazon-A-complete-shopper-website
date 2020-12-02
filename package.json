@@ -28,9 +28,8 @@
   },
   "scripts": {
     "start": "node api.js",
-    "build": "cd front && npm run build",
-    "install-front": "cd front && npm install",
-    "heroku-postbuild": "npm run install-front && npm run build"
+  
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front && npm run build --prefix front"
   },
   "engines": {
     "node": "14.2.0",
