@@ -239,11 +239,11 @@ export class Home extends Component {
   }
 
   async componentDidMount() {
-
+console.log("cmd");
     await productsdis()
     
       .then(res => {
-
+console.log(res.data.ob);
         this.setState({ products: [...res.data.ob] })
         this.setState({ sarr: [...res.data.ob] })
 
