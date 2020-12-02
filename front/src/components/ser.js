@@ -3,7 +3,7 @@ import axios from 'axios'
 export const murl=""
 
 export function productsdis() {
-    return axios.get(`${murl}/productsdis`)
+    return axios.get("/productsdis")
 }
 export function productsdisbyid(v) {
     return axios.get(`${murl}/productsdis/${v}`)
