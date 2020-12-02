@@ -26,6 +26,10 @@
     "serve": "^11.3.2",
     "sha1": "^1.1.1"
   },
+   "builds": "cd front && npm run build",
+     "installf": "cd front && npm install",
+     "heroku-postbuild": "npm run installf && npm run builds",
+  
   "scripts": {
     "start": "node api.js"
        
