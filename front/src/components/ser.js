@@ -3,7 +3,7 @@ import axios from 'axios'
 export const murl=""
 
 export function productsdis() {
-    return axios.get(`http://localhost:9000/productsdis`)
+    return axios.get(`${murl}/productsdis`)
 }
 export function productsdisbyid(v) {
     return axios.get(`${murl}/productsdis/${v}`)
