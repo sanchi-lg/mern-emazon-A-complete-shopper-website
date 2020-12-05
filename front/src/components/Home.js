@@ -281,7 +281,7 @@ console.log(res.data.ob);
     let value = document.querySelector("[name=search]").value
 
     this.setState({
-      sarr: this.state.arr.filter(p => {
+      sarr: this.state.products.filter(p => {
         if (p.product.toLowerCase().includes(value.toLowerCase())) {
           return p
         }

@@ -456,6 +456,8 @@ app.post("/resetpassword", async (req, res) => {
 
             transporter.sendMail(mailOptions, function (err, info) {
                 if (err) {
+                    console.log(err);
+
                     res.json({ err: 1, mssg: "something went wrong" })
                 } else {
                     userModel.updateOne({ email: email }, { $set: { latestrespass: { ltime: t, ltoken: token } } }, (err, data) => {
@@ -469,7 +471,6 @@ app.post("/resetpassword", async (req, res) => {
 
                     })
                 }
-
 
 
             })

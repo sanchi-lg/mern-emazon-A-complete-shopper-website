@@ -72,7 +72,7 @@ export class Product extends Component {
                         alert(res.data.mssg);
                     }
                     else {
-                        this.props.history.push("/wish")
+                        this.props.history.push("/wishlist")
                         window.location.reload()
 
                     }
