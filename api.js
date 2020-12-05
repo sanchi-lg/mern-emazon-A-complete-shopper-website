@@ -25,10 +25,7 @@ let userModel = require('./db/user')
 const nodemailer = require('nodemailer')
 let adminModel = require('./db/admin')
 app.use(bodyParser.urlencoded({ extended: false }))
-adminModel.find({},(err,data)=>{
-    console.log(err);
-    console.log(data);
-})
+
 
 
 
