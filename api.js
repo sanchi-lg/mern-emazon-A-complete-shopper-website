@@ -2,19 +2,17 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-// require('dotenv').config({ path: './d.env' })
 
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 const jwt = require('jwt-simple')
-// const url = process.env.MONGODB_URL
-const { MONGODB_URL } = require('./config/keys')
-const { MONGO_URL } = require('./config/keys')
-const { EMAIL } = require('./config/keys')
-const { PASSWORD } = require('./config/keys')
-const PORT = process.env.PORT || 9000
-const { RPORT } = require('./config/keys')
+const {MONGODB_URL}=require('./config/keys')
+const {MONGO_URL}=require('./config/keys')
+const {EMAIL}=require('./config/keys')
+const {PASSWORD}=require('./config/keys')
+const PORT=process.env.PORT||9000
+const {RPORT}=require('./config/keys')
 var fs = require('fs')
 
 mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
