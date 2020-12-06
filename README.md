@@ -63,7 +63,7 @@ https://emazon-l.herokuapp.com/
  Mobile View    
 <br/>
 <img src="readimg/f.JPG" width= "380" height="380" >
-
+<br/>
 <img src="readimg/caem.JPG"  height="350" >
 
 <img src="readimg/20201205_230810.jpg" >
@@ -100,7 +100,7 @@ https://emazon-l.herokuapp.com/
 
 <img src="readimg/Adedbef.JPG">
 
-<img src="readimg/Adedit.jpg" width=70% height=70%>
+<img src="readimg/Adedit.JPG" width=70% height=70%>
 
 <img src="readimg/Addel.JPG" >
 </p>
