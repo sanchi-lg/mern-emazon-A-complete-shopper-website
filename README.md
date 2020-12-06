@@ -49,7 +49,7 @@ https://emazon-l.herokuapp.com/
 ![.](readimg/11u..gif)
 <p align="center">
  Mobile View    
-
+<br/>
 <img src="readimg/Capture.JPG" width= "300" height="500" >
 </p>
 
@@ -61,7 +61,7 @@ https://emazon-l.herokuapp.com/
 
 <p align="center">
  Mobile View    
-
+<br/>
 <img src="readimg/f.JPG" width= "380" height="380" >
 
 <img src="readimg/caem.JPG"  height="350" >
@@ -77,16 +77,14 @@ https://emazon-l.herokuapp.com/
 ![.](readimg/5..gif)   
 <p align="center">
  Mobile View  
-
+<br/>
 <img src="readimg/Address.JPG" height=70% width=70% >
 
 <img src="readimg/20201205_231503.jpg"  >
 
 <img src="readimg/c.JPG" height=70% width=70%  >
-
-
-Mobile View     
- 
+</p>
+<p align="center">
 <img src="readimg/Capture3.JPG" height=35% width=35% >      
 
 </p>
@@ -100,7 +98,7 @@ Mobile View
 
 <img src="readimg/Ad1.JPG" width=70% height=70%  >
 
-<img src="readimg/Adedbef.JPG"  >
+<img src="readimg/Adedbef.JPG">
 
 <img src="readimg/Adedit.jpg" width=70% height=70%>
 
