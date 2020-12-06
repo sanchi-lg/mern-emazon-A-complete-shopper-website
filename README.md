@@ -44,29 +44,32 @@ This project is a responsive e-commerce website suitable for all screen size
 
 https://emazon-l.herokuapp.com/    
 
-<p>To login as a Admin : email: admin@gmail.com , password:admin></p>
+<p>To login as a Admin : email: admin@gmail.com , password:admin</p>
 
 ![.](readimg/11u..gif)
-##### Mobile View  
 <p align="center">
-<img src="readimg/Capture.JPG" width= "400" height="600" >
+  ##### Mobile View  
+
+<img src="readimg/Capture.JPG" width= "300" height="500" >
 </p>
-##### Mobile View  
+
 <p align="center">
-<img src="readimg/Capture1.JPG" width= "400" height="600" >
+<img src="readimg/Capture1.JPG" width= "140" height="180" >
 </p>
 
 ![.](readimg/3u..gif)
-##### Mobile View  
+
 <p align="center">
-<img src="readimg/f.JPG" width= "400" height="600" >
+  ##### Mobile View  
+
+<img src="readimg/f.JPG" width= "380" height="380" >
 </p>
 
 <p align="center">
-<img src="readimg/caem.JPG" width= "400" height="600" >
+<img src="readimg/caem.JPG" width= "330" height="350" >
 </p>
 <p align="center">
-<img src="readimg/20201205_230810.JPG" width= "400" height="600" >
+<img src="readimg/20201205_230810.JPG" width= "300" height="600" >
 </p>
 
 ![.](readimg/2u..gif)
@@ -74,9 +77,10 @@ https://emazon-l.herokuapp.com/
 
 
 ![.](readimg/5u..gif)   
-##### Mobile View  
 <p align="center">
-<img src="readimg/Capture4.JPG" width= "400" height="600" >
+  ##### Mobile View  
+
+<img src="readimg/Address.JPG" width= "400" height="600" >
 </p>
 
 <p align="center">
@@ -118,8 +122,8 @@ https://emazon-l.herokuapp.com/
 <img src="readimg/Addel.JPG" width= "400" height="600" >
 </p>
 
-##### Mobile View   
 <p align="center">
-<img src="readimg/Capture3.JPG" width= "400" height="600" >
+  ##### Mobile View   
+<img src="readimg/Capture3.JPG" width= "250" height="400" >
 </p>
 
