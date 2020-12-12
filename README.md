@@ -44,7 +44,12 @@ This project is a responsive e-commerce website suitable for all screen size
 
 https://emazon-lg.herokuapp.com/    
 
-<p>To login as a Admin : email: admin@gmail.com , password:admin</p>
+<p>to login as Admin :
+ <br/>
+ email: admin@gmail.com
+ <br/>
+ password:admin
+</p>
 
 ![.](readimg/11u..gif)
 <p align="center">
@@ -93,7 +98,7 @@ https://emazon-lg.herokuapp.com/
 
 
 <p align="center">
- #### Admin Portal
+ Admin Portal
 <br/>
 <img src="readimg/Ad1b.JPG"  >
 
