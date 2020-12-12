@@ -90,10 +90,11 @@ https://emazon-lg.herokuapp.com/
 </p>
 
 
-#### Admin Portal
-<br/>
+
 
 <p align="center">
+ #### Admin Portal
+<br/>
 <img src="readimg/Ad1b.JPG"  >
 
 <img src="readimg/Ad1.JPG" width=70% height=70%  >
