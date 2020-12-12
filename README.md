@@ -1,4 +1,4 @@
-## emazon-A complete shopper website
+## emazon -A complete and responsive shopper website
 ###### (*using mern stack*)
 
 
@@ -42,7 +42,7 @@ This project is a responsive e-commerce website suitable for all screen size
 
 ### Demo
 
-https://emazon-l.herokuapp.com/    
+https://emazon-lg.herokuapp.com/    
 
 <p>To login as a Admin : email: admin@gmail.com , password:admin</p>
 
