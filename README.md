@@ -1,4 +1,4 @@
-## emazon - A complete and responsive shopper website
+## emazon - a complete and responsive shopper website
 ###### (*using mern stack*)
 
 
