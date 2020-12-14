@@ -178,7 +178,7 @@ export class Login extends Component {
 
                         <GoogleLogin
 
-                            clientId="266559560838-812vk1te2om7guo3iumu37f18etnsh89.apps.googleusercontent.com"
+                            clientId=""
 
                             render={renderprops => (
                                 <button onClick={renderprops.onClick} style={{ borderColor: "transparent", borderRadius: "2.2rem", padding: 0, marginRight: "24.6px" }} ><img src={"/images/googleicon.png"} height={39} /></button>
@@ -189,7 +189,7 @@ export class Login extends Component {
 
                         <FacebookLogin
 
-                            appId="311489883578735"
+                            appId=""
                             autoLoad={false}
                             fields="name,email,picture"
                             render={renderprops => (
