@@ -45,7 +45,8 @@ This project is a responsive e-commerce website suitable for all screen size
 https://emazon-lg.herokuapp.com/    
 
 
-![.](readimg/11u..gif)
+![](https://i.imgur.com/T0FM7Sz.mp4)
+![](https://github.com/sanchi-lg/mern-emazon-A-complete-shopper-website/blob/master/readimg/11u..gif)
 <p align="center">
  Mobile View    
 <br/>
@@ -53,9 +54,9 @@ https://emazon-lg.herokuapp.com/
 </p>
 
 <p align="center">
-<img src="readimg/Capture1.JPG"  height="400" >
+<img src="https://github.com/sanchi-lg/mern-emazon-A-complete-shopper-website/blob/master/readimg/Capture.JPG"  height="400" >
 </p>
-
+<img src="https://i.imgur.com/egRVe4U.jpg"  height="400" >
 ![.](readimg/3..gif)
 
 <p align="center">
