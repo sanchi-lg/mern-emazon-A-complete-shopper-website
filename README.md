@@ -1,5 +1,5 @@
 ## emazon - a complete and responsive shopper website
-###### (*using mern stack*)
+###### (*using MERN stack*)
 
 
 ## General info
@@ -59,10 +59,10 @@ https://emazon-lg.herokuapp.com/
 <br/>
 
 <p align="center">
- <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm5qZWhocmFjeDY0bjVxZHVrd2Nncm1nczVjeGM0b2hmaHphZjAzeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6hGxLnobAVLGA7nHYS/giphy.gif" >
-</p>
-<br/>
+ <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzZoZG14YTBmdWE0dTFrb2ptaGJzb3Z6b3UwcG5sbTkwdTVhNXJxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WJDC5vGyEKg0zszWzL/giphy.gif">
 
+<br/>
+</p>
 <p align="center">
  Mobile View    
 <br/>
@@ -76,7 +76,7 @@ https://emazon-lg.herokuapp.com/
 <br/>
 
 <p align="center">
- <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHQxcDQ3aHQ2ejg5dnBrc29xaTEwNXJpN2F5NndoMnFpMXZ3ZzhncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8qQ4k0aARxbW2XGe28/giphy.gif">
+ <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm5qZWhocmFjeDY0bjVxZHVrd2Nncm1nczVjeGM0b2hmaHphZjAzeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6hGxLnobAVLGA7nHYS/giphy.gif" >
 </p>
 <br/>
 
@@ -86,12 +86,12 @@ https://emazon-lg.herokuapp.com/
 <img src="https://i.imgur.com/PjjnN78.jpg" height=70% width=70% >
  <br/>
 </p>
-<p align="center" margin-bottom="20px" margin-top="20px"> 
+<p align="center" style="margin-bottom:100px;margin-top:40px;"> 
  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm51OHAwanBmbXBmb250eXl2aWdzbXdkY2JsZzVoYjZ4aWRhbnZqcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jO1mks8W7kyKhxyWjI/giphy.gif" >
  <br/>
 </p>
 
-<p align="center" margin-bottom="20px"> 
+<p align="center" style="margin-bottom:40px;"> 
  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmEybjZhYWdjNmVybzIzaWxlbmJ5MW96N21mZjk4N3Zpb2txdW9xbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jJg3ipfzKDs75UyRPY/giphy.gif" >
  <br/> 
 </p>
