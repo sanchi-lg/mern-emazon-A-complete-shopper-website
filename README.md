@@ -43,51 +43,70 @@ This project is a responsive e-commerce website suitable for all screen size
 ### Demo
 
 https://emazon-lg.herokuapp.com/    
-
-
-![](https://i.imgur.com/T0FM7Sz.mp4)
-![](https://github.com/sanchi-lg/mern-emazon-A-complete-shopper-website/blob/master/readimg/11u..gif)
 <p align="center">
- Mobile View    
-<br/>
-<img src="readimg/Capture.JPG" width= "300" height="500" >
+ <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHQxcDQ3aHQ2ejg5dnBrc29xaTEwNXJpN2F5NndoMnFpMXZ3ZzhncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8qQ4k0aARxbW2XGe28/giphy.gif" >
 </p>
-
-<p align="center">
-<img src="https://github.com/sanchi-lg/mern-emazon-A-complete-shopper-website/blob/master/readimg/Capture.JPG"  height="400" >
-</p>
-<img src="https://i.imgur.com/egRVe4U.jpg"  height="400" >
-![.](readimg/3..gif)
 
 <p align="center">
  Mobile View    
 <br/>
-<img src="readimg/f.JPG" width= "380" height="380" >
+</p>
 <br/>
-<img src="readimg/caem.JPG"  height="350" >
 
-<img src="readimg/20201205_230810.jpg" >
+<p align="center">
+<img src="https://i.imgur.com/egRVe4U.jpg" width= "300" height="500" >
+</p>
+<br/>
+
+<p align="center">
+ <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm5qZWhocmFjeDY0bjVxZHVrd2Nncm1nczVjeGM0b2hmaHphZjAzeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6hGxLnobAVLGA7nHYS/giphy.gif" >
+</p>
+<br/>
+
+<p align="center">
+ Mobile View    
+<br/>
+<img src="https://i.imgur.com/k2enYi4.jpg" width= "380" height="380" >
+<br/>
+<img src="https://i.imgur.com/983To3x.jpg"  height="350" >
+
+<img src="https://i.imgur.com/cOHc1f6.jpg" >
 
 </p>
+<br/>
 
-![.](readimg/2..gif)
-![.](readimg/4..gif)
+<p align="center">
+ <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHQxcDQ3aHQ2ejg5dnBrc29xaTEwNXJpN2F5NndoMnFpMXZ3ZzhncSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8qQ4k0aARxbW2XGe28/giphy.gif">
+</p>
+<br/>
 
-
-![.](readimg/5..gif)   
 <p align="center">
  Mobile View  
 <br/>
-<img src="readimg/Address.JPG" height=70% width=70% >
-
-<img src="readimg/20201205_231503.jpg"  >
-
-<img src="readimg/c.JPG" height=70% width=70%  >
+<img src="https://i.imgur.com/PjjnN78.jpg" height=70% width=70% >
+ <br/>
 </p>
+<p align="center" margin-bottom="20px" margin-top="20px"> 
+ <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm51OHAwanBmbXBmb250eXl2aWdzbXdkY2JsZzVoYjZ4aWRhbnZqcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jO1mks8W7kyKhxyWjI/giphy.gif" >
+ <br/>
+</p>
+
+<p align="center" margin-bottom="20px"> 
+ <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmEybjZhYWdjNmVybzIzaWxlbmJ5MW96N21mZjk4N3Zpb2txdW9xbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jJg3ipfzKDs75UyRPY/giphy.gif" >
+ <br/> 
+</p>
+
 <p align="center">
-<img src="readimg/Capture3.JPG" height=35% width=35% >      
+<img src="https://i.imgur.com/qVeWXbV.jpg" height=70% width=70%  >
+<br/>
+<img src="https://i.imgur.com/tSnU71q.jpg" height=70% width=70%  >
+</p>
+
+<p align="center">
+<img src="https://i.imgur.com/juE3p9x.jpg" height=35% width=35% >      
 
 </p>
+<br/>
 
 
 
@@ -95,15 +114,23 @@ https://emazon-lg.herokuapp.com/
 <p align="center">
  Admin Portal
 <br/>
-<img src="readimg/Ad1b.JPG"  >
+<img src="https://i.imgur.com/50W3Kei.jpeg" width=70% height=70% >
+<br/>
+</p>
+<div></div>
+<p align="center">
+<img src="https://i.imgur.com/9d7wBMI.jpg" width=70% height=70%  >
+<br/>
+</p>
+<p align="center"><div></div></p>
+<p align="center">
+<img src="https://i.imgur.com/OL87Iil.jpg"width=70% height=70% >
+<br/>
+</p>
 
-<img src="readimg/Ad1.JPG" width=70% height=70%  >
-
-<img src="readimg/Adedbef.JPG">
-
-<img src="readimg/Adedit.JPG" width=70% height=70%>
-
-<img src="readimg/Addel.JPG" >
+<p align="center">
+<img src="https://i.imgur.com/u81sDBV.jpg" width=70% height=70%>
+<br/>
 </p>
 
 
